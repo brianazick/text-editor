@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.125 ns
+From           : KEY[3]
+To             : display_memory:inst1|memory[14][29][5]
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.418 ns
+From           : keyboard_to_char_addr:inst|reg8:inst13|state[6]
+To             : LEDR[1]
+From Clock     : CLOCK_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.226 ns
+From           : PS2_DAT
+To             : keyboard_to_char_addr:inst|keyboard:inst7|SHIFTIN[8]
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'VGA_SYNC:inst8|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0'
+Slack          : -0.164 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : display_memory:inst1|memory[27][23][0]
+To             : Char_ROM:inst7|lpm_rom:char_gen_rom|altrom:srom|altsyncram:rom_block|altsyncram_6401:auto_generated|ram_block1a0~porta_address_reg3
+From Clock     : CLOCK_50
+To Clock       : VGA_SYNC:inst8|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0
+Failed Paths   : 2
+
+Type           : Clock Setup: 'CLOCK_50'
+Slack          : 8.378 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 86.04 MHz ( period = 11.622 ns )
+From           : counter:inst2|row_count[1]
+To             : display_memory:inst1|memory[2][25][4]
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLOCK_50'
+Slack          : 0.391 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : keyboard_to_char_addr:inst|keyboard:inst7|INCNT[1]
+To             : keyboard_to_char_addr:inst|keyboard:inst7|INCNT[1]
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Hold: 'VGA_SYNC:inst8|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0'
+Slack          : 0.546 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : VGA_SYNC:inst8|h_count[9]
+To             : VGA_SYNC:inst8|horiz_sync
+From Clock     : VGA_SYNC:inst8|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0
+To Clock       : VGA_SYNC:inst8|video_PLL:video_PLL_inst|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 2
+
+--------------------------------------------------------------------------------------
+

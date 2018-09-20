@@ -1,0 +1,16 @@
+GED
+
+	Undo Commands
+	     1.	Move
+	     2.	Paste
+	     3.	Delete
+
+
+GED
+
+	Undo Commands
+	     1.	Move
+	     2.	Paste
+	     3.	Delete
+
+

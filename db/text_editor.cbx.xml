@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="text_editor">
+		<CBX_INST_ENTRY INSTANCE_NAME="|text_editor|Char_ROM:inst7|LPM_ROM:char_gen_rom|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_6401.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

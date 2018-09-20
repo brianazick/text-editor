@@ -1,0 +1,75 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity code_to_char_addr is
+	port(scan_code: in std_logic_vector(7 downto 0);
+		 character_address: out std_logic_vector(5 downto 0));
+end code_to_char_addr;
+
+architecture impl of code_to_char_addr is
+	
+	begin
+	process (scan_code) begin
+
+	case scan_code is
+		--when "00000000" => character_address <= o"01"; -- @
+		when "00011100" => character_address <= o"01"; -- A
+		when "00110010" => character_address <= o"02"; -- B
+		when "00100001" => character_address <= o"03"; -- C
+		when "00100011" => character_address <= o"04"; -- D
+		when "00100100" => character_address <= o"05"; -- E
+		when "00101011" => character_address <= o"06"; -- F
+		when "00110100" => character_address <= o"07"; -- G
+		when "00110011" => character_address <= o"10"; -- H
+		when "01000011" => character_address <= o"11"; -- I
+		when "00111011" => character_address <= o"12"; -- J
+		when "01000010" => character_address <= o"13"; -- K
+		when "01001011" => character_address <= o"14"; -- L
+		when "00111010" => character_address <= o"15"; -- M
+		when "00110001" => character_address <= o"16"; -- N
+		when "01000100" => character_address <= o"17"; -- O
+		when "01001101" => character_address <= o"20"; -- P
+		when "00010101" => character_address <= o"21"; -- Q
+		when "00101101" => character_address <= o"22"; -- R
+		when "00011011" => character_address <= o"23"; -- S
+		when "00101100" => character_address <= o"24"; -- T
+		when "00111100" => character_address <= o"25"; -- U
+		when "00101010" => character_address <= o"26"; -- V
+		when "00011101" => character_address <= o"27"; -- W
+		when "00100010" => character_address <= o"30"; -- X
+		when "00110101" => character_address <= o"31"; -- Y
+		when "00011010" => character_address <= o"32"; -- Z
+		--when "00000000" => character_address <= o"33"; -- [
+		--when "00000000" => character_address <= o"34"; -- ]
+		when "00101001" => character_address <= o"40"; -- SPACE
+		--when "00000000" => character_address <= o"41"; -- !
+		--when "00000000" => character_address <= o"42"; -- "
+		--when "00000000" => character_address <= o"43"; -- #
+		--when "00000000" => character_address <= o"44"; -- $
+		--when "00000000" => character_address <= o"45"; -- %
+		--when "00000000" => character_address <= o"46"; -- &
+		--when "00000000" => character_address <= o"47"; -- '
+		--when "00000000" => character_address <= o"50"; -- (
+		--when "00000000" => character_address <= o"51"; -- )
+		--when "00000000" => character_address <= o"52"; -- *
+		--when "00000000" => character_address <= o"53"; -- +
+		--when "00000000" => character_address <= o"54"; -- ,
+		--when "00000000" => character_address <= o"55"; -- -
+		--when "00000000" => character_address <= o"56"; -- .
+		--when "00000000" => character_address <= o"57"; -- /
+		when "01000101" => character_address <= o"60"; -- 0
+		when "00010110" => character_address <= o"61"; -- 1
+		when "00011110" => character_address <= o"62"; -- 2
+		when "00100110" => character_address <= o"63"; -- 3
+		when "00100101" => character_address <= o"64"; -- 4
+		when "00101110" => character_address <= o"65"; -- 5
+		when "00110110" => character_address <= o"66"; -- 6
+		when "00111101" => character_address <= o"67"; -- 7
+		when "00111110" => character_address <= o"70"; -- 8
+		when "01000110" => character_address <= o"71"; -- 9
+		when "01110111" => character_address <= o"40"; -- BACKSPACE
+		when "01011010" => character_address <= o"40"; -- ENTER
+		when others => character_address <= o"40";
+	end case;
+	end process;
+end impl;

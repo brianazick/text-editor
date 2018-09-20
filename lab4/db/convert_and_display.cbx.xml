@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="convert_and_display">
+		<CBX_INST_ENTRY INSTANCE_NAME="|convert_and_display|lpm_rom0:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_g381.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
